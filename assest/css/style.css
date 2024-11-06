@@ -1,0 +1,29 @@
+/* 
+I want a color scheme of like a spring vibes with pastel colors
+The color Scheme so Far that I have expereinced (This is probably going to change again and again) 
+Background color sky blue: #87CEEB the reason behind I choose this color scheme is because its just my favorite color but just the vibes of spring with how blue the sky is. 
+The font color is begie but I am debating still on which fonts will be which color but headings I might go with begie color vibes: #F5E1A4, I think it contrast the sky blue well. 
+the other font color is porbably will be mint green #B5E7A0, I think it fits the vibes but still searching 
+The links I am going with yellow:#FFD700 I think it would look cute at the end with the links being yellow like brings our contrast. 
+For the font I am trying to go with something more playful in some sense thats why I want with gabriela serif type of font
+
+*/ 
+
+h1{
+    color:#F5E1A4;
+    text-align:center;
+}
+
+nav ul{
+    list-style-type: none;
+
+}
+nav ul li a {
+    color:#FFD700;
+}
+body{
+    background-color:#87CEEB;
+    font-family: "Gabriela", serif;
+    font-weight: 400;
+    font-style: normal;
+}
