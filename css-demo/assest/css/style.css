@@ -1,0 +1,41 @@
+/* Style for css-demo*/
+html {
+    box-sizing:border-box;
+
+}
+
+*, *:before *:after{
+
+    box-sizing:inherit;
+}
+
+body{
+    background-color: #875AFF;
+    font-family: "Rokkitt", serif;
+
+    
+}
+
+main{
+    background-color: whitesmoke;
+    width:80vw;
+    margin-top:50px;
+    margin-bottom: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    /* margin: 40px auto 40px auto; */ 
+    /* top/right/bottom/left */
+    /* top/bottom| left/right*/
+    /*margin: 40px auto*/
+    border: 8px solid #ACCAFC;
+    border-radius: 10px;
+
+}
+
+header.primary {
+    padding:20px;
+    background-color:#D2D4FC;
+    background-image: url("https://assets.codepen.io/7248/bg_1.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
