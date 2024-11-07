@@ -18,8 +18,18 @@ nav ul{
     list-style-type: none;
 
 }
+
+nav {
+    text-align: center;
+    background-color: white;
+    border-radius:10px;
+    border: 8px solid #ACCAFC;
+    
+}
 nav ul li a {
     color:#FFD700;
+    font-size: 20px;
+
 }
 body{
     background-color:#87CEEB;
