@@ -9,6 +9,12 @@ html {
     box-sizing:inherit;
 }
 
+/*--------------Utility Classes---------- */
+
+.container{
+    padding:40px;
+    margin:auto;
+}
 body{
     background-color: #875AFF;
     font-family: "Rokkitt", serif;
@@ -38,4 +44,72 @@ header.primary {
     background-image: url("https://assets.codepen.io/7248/bg_1.png");
     background-repeat: no-repeat;
     background-size:cover;
+    display: flex ;
+    border-bottom:3px solid #875AFF ;
+    
 }
+
+
+header.primary h1 a {
+    color:#ffff;
+    text-decoration: none;
+    font-size: 2.5rem;
+    text-shadow: 3px 3px #000;
+}
+
+header.primary h2 {
+    color: #ffff;
+}
+
+header.primary div.hgroup{
+    width:70%;
+}
+header.primary nav{
+    width:30%;
+}
+header.primary nav ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+
+header.primary nav ul li{
+    margin-bottom:10px;
+
+}
+header.primary nav ul li a{
+    border:1px solid #875AFF;
+    border-right: 10px solid #875AFF;
+    border-left:10px solid #875AFF;
+    border-radius: 15px 0;
+    color:white; 
+    display: block;
+    background-color: rgba(0,0,0, .6);
+    padding:10px 10px 10px 0;
+    text-align: center;
+    transition:.5s;
+    text-decoration: none;
+
+}
+header.primary nav ul li a:hover{
+    background-color: rgba(0,0,0, .9);
+    text-decoration:underline;
+    
+}
+
+#content{
+    line-height: 1.8rem;
+    
+}
+ 
+#content h2, #content h3{
+    color:rgb(111, 111, 170);
+    text-shadow: .5px .5px #a8aaca;
+    border-left:7.5px solid #875AFF;
+    padding:7.5px 7.5px;
+    border-radius: 15px 0;
+}
+
+
+
+
