@@ -136,7 +136,7 @@ header.primary nav ul li a:hover{
 }
 
 #blog article.post{
-    background-color: #875AFF;
+    background-color: white;
     margin: 20px;
     padding: 20px;
     display:grid;
