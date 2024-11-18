@@ -20,7 +20,7 @@ img{
     margin:auto;
 }
 body{
-    background-color: #875AFF;
+    background-color: #2A3D66;
     font-family: "Rokkitt", serif;
 
     
@@ -44,12 +44,12 @@ main{
 
 header.primary {
     padding:20px;
-    background-color:#D2D4FC;
+    background-color:#4CAF50;
     background-image: url("https://assets.codepen.io/7248/bg_1.png");
     background-repeat: no-repeat;
     background-size:cover;
     display: flex ;
-    border-bottom:3px solid #875AFF ;
+    border-bottom:3px solid #B4B8B9;
     
 }
 
@@ -62,7 +62,7 @@ header.primary h1 a {
 }
 
 header.primary h2 {
-    color: #ffff;
+    color: white;
 }
 
 header.primary div.hgroup{
@@ -108,7 +108,7 @@ header.primary nav ul li a:hover{
 }
  
 #content h2, #content h3, article.widget h2{
-    color:rgb(111, 111, 170);
+    color:#7F3FBF;
     text-shadow: .5px .5px #a8aaca;
     border-left:7.5px solid #875AFF;
     padding:7.5px 7.5px;
@@ -118,7 +118,7 @@ header.primary nav ul li a:hover{
 
 
 #blog.container {
-    background-color: rgb(248, 150, 248);
+    background-color: #9fb4e0;
     padding: 20px 0;
     border-top: 5px double #875AFF;
     border-bottom: 5px double #875AFF;
