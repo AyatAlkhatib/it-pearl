@@ -108,9 +108,9 @@ header.primary nav ul li a:hover{
 }
  
 #content h2, #content h3, article.widget h2{
-    color:#7F3FBF;
-    text-shadow: .5px .5px #a8aaca;
-    border-left:7.5px solid #875AFF;
+    color:rgb(129, 144, 153);
+    text-shadow: .5px .5px rgb(160, 194, 216);
+    border-left:7.5px solid rgb(130, 178, 207);
     padding:7.5px 7.5px;
     border-radius: 15px 0;
 
@@ -127,7 +127,7 @@ header.primary nav ul li a:hover{
 }
 
 #blog > h2{
-    color:rgb(111, 111, 170);
+    color:white;
     text-shadow: .5px .5px #a8aaca;
     border-left:7.5px solid #875AFF;
     padding:7.5px 7.5px;
@@ -186,4 +186,63 @@ aside .container{
     background-repeat: no-repeat;
     background-size:cover;
     color:white;
+}
+
+figure{
+    text-align: center;
+    color:#2A3D66;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    border-right: 5px solid  #9fb4e0;
+    border-left:5px solid  #9fb4e0;
+    border-bottom:5px solid #875AFF ;
+    border-top: 5px solid #875AFF;    
+    font-style:italic;
+}
+
+#blog .post header{
+    text-align:center;
+}
+
+ .post .post-date{
+    text-align:left ;
+    display: block;
+    font-size: 1rem;
+    color:#ACCAFC;
+    border-bottom: 2px solid #9fb4e0;
+
+}
+
+#blog .post header h2 a{
+    color:#9fb4e0;
+    text-decoration: none;
+    text-align: center;
+    
+
+}
+
+#blog .post header h2 a:hover{
+    text-decoration: underline;    
+}
+
+#blog .post p{
+    color:#2163f0;
+}
+
+.post .post-meta{
+    text-align:left ;
+    display: block;
+    font-size: 1rem;
+    color:#ACCAFC;
+    border-top: 2px solid #9fb4e0;
+    
+}
+
+.post .post-meta a{
+    text-decoration: none;
+    color:#a8aaca;
+
+}
+.post .post-meta a:hover{
+    text-decoration: underline;
 }
