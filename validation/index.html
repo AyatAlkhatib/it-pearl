@@ -8,6 +8,10 @@
   <meta name="description" content="new-patient-registrion">
   <meta name="author" content="Ayat Alkhatib">
   <link href="assest/css/style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
+
 
 </head>
 <body>
@@ -131,7 +135,10 @@
 <textarea id="medicationsList" name="medicationsList" cols="30" rows="3"></textarea><br><br>
 
 
-<input type="submit" value="submit">
+<input type="submit" value="submit" name="formButton"> 
+<script> $( "#MyFormName").validate ({});
+	
+</script>
 
 
 </form>
