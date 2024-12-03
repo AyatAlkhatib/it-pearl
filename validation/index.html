@@ -64,14 +64,16 @@ data-rule-max="500" data-msg-max="Weight must be less than or equal to 500 pound
   <option value="W">Widowed </option>
 </select><br><br>
 
-<label class= "formlabel" for="adress"><strong>Adress:</strong></label>
-<input type="text" id="adress" name="adress" size="30" maxlength="30" data-rule-required="true" data-msg-required=" Required"><br><br>
 
-<label class= "formlabel" for="citystatezip"><strong>City/State/Zip Code:</strong></label>
-<input type="text" id="citystatezip" name="citystatezip" size="30" maxlength="30">
-<select id="citystatezip1" name="citystatezip" data-rule-required="true" data-msg-required="State is Required">
-  <option value="">Select a State:</option>
-  <option value="AL">Alabama</option>
+<label class="formlabel" for="adress"><strong>Address:</strong></label>
+<input type="text" id="adress" name="adress" maxlength="30" data-rule-required="true" data-msg-required="Required"><br><br>
+
+<label class="formlabel" for="city"><strong>City/State/Zip:</strong></label>
+<input type="text" id="city" name="City" maxlength="30" data-rule-required="true" data-msg-required="Required">
+
+<select id="state" name="state" data-rule-required="true" data-msg-required="Required">
+	<option value="" >Select a State</option>
+	<option value="AL">Alabama</option>
 	<option value="AK">Alaska</option>
 	<option value="AZ">Arizona</option>
 	<option value="AR">Arkansas</option>
@@ -122,10 +124,12 @@ data-rule-max="500" data-msg-max="Weight must be less than or equal to 500 pound
 	<option value="WV">West Virginia</option>
 	<option value="WI">Wisconsin</option>
 	<option value="WY">Wyoming</option>
-</select> 
-<input type="text" id="city-state-zip" name="city-state-zip" size="5" maxlength="5" data-rule-required="true" data-msg-required="Zipcode is Required" data-rule-digits="true" data-msg-digits="Enter 5 digits Zipcode"><br><br>
+</select>
 
-<label class="formlabel">Taking Medications:</label>
+
+<input type="text" id="zip" name="Zip" size="5" maxlength="5" data-rule-required="true" data-msg-required="Required" data-rule-digits="true" data-msg-digits="Enter 5 digits"><br>
+
+<label class="formlabel">Taking any Medications:</label>
             <input type="radio" id="yes" name="Medications" value="Y" data-rule-required="true" data-msg-required= "Required">
             <label for="yes">Yes</label>
             <input type="radio" id="no" name="Medications" value="N">
