@@ -27,34 +27,36 @@
 <input type="text" id="MiddleInitial" name="MiddleInitial" size="1" maxlength="1"> <br><br>
 
 <label class= "formlabel" for="LastName"><strong>Last Name:</strong></label>
-<input type="text" id="LastName" name="LastName" size="30" maxlength="30" ata-rule-required="true" data-msg-required="Last Name is Required"><br><br>
+<input type="text" id="LastName" name="LastName" size="30" maxlength="30" data-rule-required="true" data-msg-required="Last Name is Required"><br><br>
 
 <label class= "formlabel" for="Email"><strong>Email:</strong></label>
 <input type="email" id="Email" name="Email" size="30" maxlength="30" data-rule-required="true" data-msg-required="Email is Required" data-rule-email="true" data-msg-email="Email is Required"><br><br>
 
-<label class= "formlabel" for="sex"><strong>Sex:</strong></label>
-<select id="sex" name="sex" data-rule-required="true" data-msg-required="Required"> 
-	<option value="" >Select your sex</option>
-	<option value="M">Male</option>
-	<option value="F">Female</option>
-	<option value="N">N/A</option>
-</select><br><br>
+<label class= "formlabel" for="male"><strong>Sex:</strong></label>
+<fieldset>
+<input type="radio" id="male" name="Sex" value="M" data-rule-required="true" data-msg-required="This is Required">
+<label for="male">Male</label>
+<input type="radio" id="female" name="Sex" value="F">
+<label for="female">Female</label>
+<input type="radio" id="na" name="Sex" value="N">
+<label for="na">N/A</label><br>
+</fieldset>
 
-<label class= "formlabel" for="Birthday"><strong>Birthday:</strong></label>
-<input type="date" id="Birthday" name="Birthday" data-rule-required="true" data-msg-required="Birthdate is Required" data-rule-date="true" data-msg-date="Birthdate is Required"><br><br>
+<label class= "formlabel" for="birthday"><strong>Birthday:</strong></label>
+<input type="text" id="birthday" name="Birthday" size="8" maxlength="10" data-rule-required="true" data-msg-required="Birthdate is Required" data-rule-date="true" data-msg-date="Birthdate is Required"><br><br>
 
 <label class= "formlabel" for="height"><strong>Height (in inches):</strong></label>
 <input type="number" id="height" name="height" min="12" max="120" data-rule-required="true" data-msg-required="Height is Required" data-rule-number="true" data-msg-number="Height is Required" data-rule-min="12" data-msg-min="Height must be greater than or equal to 12 inches" data-rule-max="120" data-msg-max="Height must be less than or equal to 120 inches"><br><br>
 
 <label class= "formlabel" for="weight"><strong>Weight (pounds):</strong></label>
-<input type="number" id="weight" name="weight" minlength="10" maxlength="500" data-rule-required="true" data-msg-required="Weight is Required" data-rule-number="true" data-msg-number="Weight is Required" data-rule-min="10" data-msg-min="Weight must be greater than or equal to 10 pounds"
+<input type="number" id="weight" name="weight" min="10" max="500" data-rule-required="true" data-msg-required="Weight is Required" data-rule-number="true" data-msg-number="Weight is Required" data-rule-min="10" data-msg-min="Weight must be greater than or equal to 10 pounds"
 data-rule-max="500" data-msg-max="Weight must be less than or equal to 500 pounds"><br><br>
 
 <label class= "formlabel" for="PhoneNumber"><strong>Phone Number:</strong></label>
 <input type="tel" id="PhoneNumber" name="PhoneNumber" size="14" maxlength="14" data-rule-required="true" data-msg-required="Phone Number is Required" data-rule-phoneUS="true" data-msg-phoneUS="Phone Number format: (XXX) XXX-XXXX."><br><br>
 
 <label class= "formlabel" for="maritalStatus"><strong>Marital Status:</strong></label>
-<select id="maritalStatus" name="maritalStatus" ata-rule-required="true" data-msg-required="Marital Status is Required">
+<select id="maritalStatus" name="maritalStatus" data-rule-required="true" data-msg-required="Marital Status is Required">
   <option value="">Select Status</option>
   <option value="S">Single</option>
   <option value="M">Married</option>
@@ -125,7 +127,7 @@ data-rule-max="500" data-msg-max="Weight must be less than or equal to 500 pound
 <input type="text" id="city-state-zip" name="city-state-zip" size="5" maxlength="5" data-rule-required="true" data-msg-required="Zipcode is Required" data-rule-digits="true" data-msg-digits="Enter 5 digits Zipcode"><br><br>
 
 <label class= "formlabel" for="medication"><strong>Taking Medication:</strong></label>
-<select id="medication" name="medication" value="Y" data-rule-required="true" data-msg-required="This is Required">
+<select id="medication" name="medication">
 	<option value="">Select an Option</option>
 	<option value="Y">Yes</option>
 	<option value="N">No</option>
@@ -137,7 +139,7 @@ data-rule-max="500" data-msg-max="Weight must be less than or equal to 500 pound
 
 
 <input type="submit" value="submit" name="formButton"> 
-<script> $( "#MyFormName").validate ({});
+<script> $( "#patientform").validate ({});
 	
 </script>
 
