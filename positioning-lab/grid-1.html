@@ -10,6 +10,7 @@
     /* ---------------Box Sizing----------------- */
     html {
       box-sizing: border-box;
+      
     }
     *,
     *:before,
@@ -23,39 +24,62 @@
       color: #FFF;
       text-align: center;
       line-height: 24px;
+  
     }
     #wrapper {
+    display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap:20px;
       background-color: #FFF;
       border: 1px solid #c0c0c0;
       width: 800px;
       margin-right: auto;
       margin-left: auto;
       text-shadow: 2px 2px #000;
+      padding-top: 20px;
+      padding-left: 15px;
+      
+      
     }
     #navy {
       background-color: #001f3f;
+      width:370px;
+      height:125px;
     }
     #teal {
       background-color: #39CCCC;
+      width:370px;
+      height:125px;
     }
     #blue {
       background-color: #0074D9;
+      width: 370px;
+      height:125px;
     }
     #aqua {
       background-color: #7FDBFF;
+      width:370px;
+      height:125px; 
     }
+
     #footer {
-      background-color: #666;
+      background-color: #666; 
+      margin: 20px;
+      grid-column: span 2;
+      
+      
     }
+    
     h1 {
       color: #000;
       font-weight: normal;
       padding: 50px;
     }
+
   </style>
 </head>
 <body>
-  <h1>Float 1</h1>
+  <h1>Grid 1</h1>
   <section id="wrapper">
     <div id="navy">Navy</div>
     <div id="teal">Teal</div>
