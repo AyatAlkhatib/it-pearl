@@ -4,10 +4,47 @@ $( "#CircleForm" ).validate({
 });
 
 function circleCalculations(){
-    if ($("#CricleForm").valid()){
+    if ($("#CircleForm").valid()){
 
-    let x=1; 
+        let radius; 
+        let diameter; 
+        let circumference; 
+        let area;
+        let radiusfp;
 
-    window.alert("Start of Calculations ")
+        radius = document.getElementById("radius").value; 
+        radiusfp = parseFloat(radius);
+
+        diameter = calculateDiameter(radiusfp);
+        document.getElementById("diameter").innerHTML = diameter;
+        
+        circumference = calculateCirumference(radiusfp);
+        document.getElementById("circumference").innerHTML = circumference;
+
+        area= calculateArea(radiusfp);
+        document.getElementById("area").innerHTML = area; 
+
+
+ 
     }
+}
+
+function calculateDiameter(r){
+    return 2 * r;
+
+}
+
+function calculateCirumference(r){
+    return 2 * Math.PI * r ;
+}
+
+function calculateArea(r)
+{
+    return Math.PI * r *r;
+}
+function ClearForm() {
+    document.getElementById("CircleForm").reset();
+    document.getElementById("diameter").innerHTML = "";
+    document.getElementById("circumference").innerHTML = "";
+    document.getElementById("area").innerHTML = "";
 }
