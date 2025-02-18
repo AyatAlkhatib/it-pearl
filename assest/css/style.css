@@ -20,7 +20,7 @@ nav ul{
 }
 
 nav {
-    text-align: center;
+    text-align: left;
     background-color: white;
     border-radius:10px;
     border: 8px solid #ACCAFC;
@@ -29,7 +29,7 @@ nav {
 nav ul li a {
     color:#FFD700;
     font-size: 20px;
-    text-decoration: none;
+    text-decoration:dotted;
 
 }
 body{
@@ -46,8 +46,7 @@ nav ul ul {
 }
 nav ul li:hover>ul{
     display:flex;
-    align-items: center;
-    justify-content: center;
+   
 }
 nav ul ul li {
     margin-bottom: 5px;
