@@ -29,27 +29,27 @@
 
             
             <label class="formlabel">Operator: </label>
-                <label for="plusOperator">
+                <label for="addition">
                     <input type="radio" name="Operator" id="addition" value="plus"
-                           data-rule-required="true" data-msg-required="Operator is Required" />+
+                           data-rule-required="true" data-msg-required="Operator is Required"> +
                 </label>
-                <label for="minusOperator">
-                    <input type="radio" name="Operator" id="subtraction" value="minus">-
+                <label for="subtraction">
+                    <input type="radio" name="Operator" id="subtraction" value="minus"> -
                 </label>
-                <label for="multipleOperator">
-                    <input type="radio" name="Operator" id="multiplication" value="multiply">*
+                <label for="multiplication">
+                    <input type="radio" name="Operator" id="multiplication" value="multiply"> *
                 </label>
-                <label for="divisionOperator">
-                    <input type="radio" name="Operator" id="division" value="divided">/
+                <label for="division">
+                    <input type="radio" name="Operator" id="division" value="divided"> /
                 </label>
-            <label for="Operator" class="error" id="OperatorError" required></label>
+            <label class="error" id="OperatorError"></label>
             <br><br>
       
             <label class="formlabel" for="Operand2">Operand 2: </label>
             <input type="text" id="Operand2" name="Operand2" size="15" maxlength="15"       
                    data-rule-required="true"  data-msg-required="Operand 2 is Required" 
                    data-rule-number="true" data-msg-number="Operand 2 must be a Number">
-            <label class="error" for="Operand2" id="Operand2Error" required></label>
+            <label class="error" for="Operand2" id="Operand2Error"></label>
             <br><br>
 
             
@@ -60,7 +60,7 @@
             <br><br>
 
             <input type="button" value="Calculate" name="Calculate" onclick="calculate();">
-            <input type="button" value="Clear" name="Clear" onclick="clearform();" novalidate>
+            <input type="button" value="Clear" name="Clear" onclick="clearform();">
 
         </fieldset>
     </div>
