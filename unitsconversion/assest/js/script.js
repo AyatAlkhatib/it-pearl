@@ -74,8 +74,8 @@ function calculate(){
             let bruceUrl = " https://brucebauer.info/assets/ITEC3650/unitsconversion.php";
             bruceUrl= bruceUrl+ "?FromValue=" + encodeURIComponent(Fromvalue) + "&FromUnit=" + encodeURIComponent(Fromunit) + "&ToUnit=" + encodeURIComponent(Tounit);
 
-            let respond = await fetch (bruceUrl);
-            let result = await respond.json();
+            let response = await fetch (bruceUrl);
+            let result = await response.json();
 
             document.getElementById("tovalue").innerHTML=result;
 
@@ -107,8 +107,7 @@ function calculate(){
 
         }
     
-        $("#myform").validate({});
-
+        
 
 
 
