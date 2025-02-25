@@ -57,7 +57,7 @@ header.primary{
 }
 
 header.primary nav{
-    position: absolute;
+    position: relative;
     width: 100%;
     top: 0;
     left: 0;
@@ -66,7 +66,15 @@ header.primary nav{
     background-color: rgba(0, 0, 0, 0.5); 
     padding: 1px 0;
     
+    
 
+}
+
+header.primary nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap:20px;
 }
 
 header.primary nav ul, nav ul{
@@ -90,6 +98,11 @@ header.primary nav ul li a{
 
 }
 
+header.primary nav ul li{
+    position: relative;
+    display: inline-block;
+}
+
 header.primary nav ul li ul {
     display: none;
     position: absolute;
@@ -102,7 +115,18 @@ header.primary nav ul li ul {
     z-index: 1000;
 }
 
-header.primary nav ul li:hover ul {
+header.primary nav ul li ul a{
+    color:white; 
+    display: block;
+    padding:10px 10px 10px 10px;
+    text-align: center;
+    transition:.5s;
+    font-size: .9;
+    text-decoration: none;
+
+}
+
+header.primary nav ul li:hover > ul {
     display: block;
 }
 
