@@ -1,36 +1,49 @@
-/* General Reset */
 html {
-    box-sizing: border-box;
+    box-sizing:border-box;
+
 }
 
-*, *:before, *:after {
-    box-sizing: inherit;
+*, *:before *:after{
+
+    box-sizing:inherit;
 }
 
+img{
+    max-width: 100%;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+body{
     background-color: white;
     font-family: "Rokkitt", serif;
-    line-height: 1.6;
+
+    
 }
 
-.hgroup {
+.hgroup{
+    position: relative;
     width: 100%;
     height: 50vh;
-    background: url("../img/great-falls.jpg") center/cover no-repeat;
+    background-image: url("../img/great-falls.jpg");
+    background-position: center; 
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    
+
+
 }
 
-.hgroup h1 a {
+
+header.primary h1 a {
     color: white;
     font-size: 2em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -38,35 +51,44 @@ body {
 }
 
 
-
-
-header.primary nav {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px 0;
-    text-align: center;
-}
-
-header.primary nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-header.primary nav ul li {
+header.primary{
     position: relative;
-    display: inline-block;
+    justify-content: space-between;
 }
 
-header.primary nav ul li a {
-    color: white;
-    padding: 10px 15px;
-    display: block;
-    text-decoration: none;
+header.primary nav{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 1px 0;
+    
+
+}
+
+header.primary nav ul, nav ul{
+    list-style-type: none;
+    margin:10px;
+    padding:0;
+    display: flex;
+    gap:15px;
     
 }
 
+
+header.primary nav ul li a{
+    color:white; 
+    display: block;
+    padding:10px 10px 10px 10px;
+    text-align: center;
+    transition:.5s;
+    font-size: .9;
+    text-decoration: none;
+
+}
 
 header.primary nav ul li ul {
     display: none;
@@ -77,77 +99,26 @@ header.primary nav ul li ul {
     left: 0;
     width: 150px;
     padding: 0;
-    
+    z-index: 1000;
 }
 
 header.primary nav ul li:hover ul {
     display: block;
 }
 
-header.primary nav ul li ul li {
-    width: 100%;
-    text-align: left;
+header.primary nav ul li a:hover{
+    background-color: rgba(0,0,0, .9);
+    text-decoration:underline;
+    
 }
 
-header.primary nav ul li ul li a {
-    padding: 10px;
-    display: inline-block;
-}
-
-
-.container {
-    width: 90%;
-    max-width: 900px;
-    margin: 30px auto;
+  
+.container h1{
     text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
-
-.container h1, .container h2 {
-    margin-bottom: 15px;
-}
-
-
-#history, #visit {
-    text-align: center;
-    margin: 30px auto;
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 10px;
-}
-
-
-#visit article {
-    background: white;
-    padding: 15px;
-    margin: 10px auto;
-    border-left: 5px solid #0077cc;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-}
-
-footer {
-    background: #6B8E23;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-}
-
-footer h5 {
-    margin-bottom: 10px;
-}
-
-footer p {
-    font-size: 0.9em;
-}
-
-.social-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1em;
-    margin: 0 10px;
-}
-
-.social-links a:hover {
-    text-decoration: underline;
+.container h2{
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
