@@ -86,14 +86,8 @@ header.primary nav ul{
     gap:20px;
 }
 
-header.primary nav ul, nav ul{
-    list-style-type: none;
-    margin:10px;
-    padding:0;
-    display: flex;
-    gap:15px;
-    
-}
+
+
 
 
 header.primary nav ul li a{
@@ -111,6 +105,8 @@ header.primary nav ul li{
     position: relative;
     display: inline-block;
 }
+
+
 
 header.primary nav ul li ul {
     display: none;
@@ -133,6 +129,7 @@ header.primary nav ul li ul a{
     text-decoration: none;
 
 }
+
 
 header.primary nav ul li:hover > ul {
     display: block;
