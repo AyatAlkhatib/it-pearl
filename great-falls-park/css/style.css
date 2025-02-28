@@ -20,16 +20,15 @@ img{
 body{
     background-color: white;
     font-family: "Rokkitt", serif;
+    font-size: 18px;
 
     
 }
 
 main{
     width:80vw;
-    margin-top:50px;
-    margin-bottom: 50px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin:50px auto;
+    padding: 20px;
    
 }
 
@@ -57,12 +56,14 @@ header.primary h1 a {
     font-size: 2em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-decoration: none;
+    
 }
 
 
 header.primary{
     position: relative;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 
 header.primary nav{
@@ -104,6 +105,7 @@ header.primary nav ul li a{
 header.primary nav ul li{
     position: relative;
     display: inline-block;
+    font-size: 1.1rem;
 }
 
 
@@ -177,14 +179,14 @@ header.primary nav ul li a:hover{
     margin:0;
     text-align:center;
     text-decoration: underline;
-    font-size:25px;
+    font-size: 28px;
     color:black;
 }
 
 #visit  {
     display:flex;
     flex-direction:row;
-    justify-content:space-around;
+    justify-content:center;
     gap:2rem;
     border-bottom:2.5px dotted #c0c0c0;
     padding: 2rem 0;
@@ -245,5 +247,15 @@ header.primary nav ul li a:hover{
     text-align:center;
     padding:10px;
     color:#ffffff;
-    font-size:1.1rem;
+    font-size: 1.2rem; 
+  }
+
+  .social-media a img {
+    width: 35px;  
+    height: 35px; 
+    transition: transform 0.3s ease; 
+  }
+  
+  .social-media a img:hover {
+    transform: scale(1.1); 
   }
