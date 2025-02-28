@@ -151,6 +151,9 @@ header.primary nav ul li a:hover{
     color: #393651;
     text-shadow:  2px 2px 5px rgba(148, 110, 110, 0.5);
     font-size: 35px;
+    max-width: 60%;
+    padding-bottom: 20px;
+    
 
 }
 
@@ -159,13 +162,28 @@ header.primary nav ul li a:hover{
     padding-left: 20px;
     margin-top: 10px;
     margin-bottom:10px;
+    padding-top: 30px;
+    font-size: 20px;
+    
+   
+    
 
 }
-
+.welcome {
+    display:block;
+    gap: 20px; 
+    padding: 20px;
+    overflow: hidden;
+}
 .welcome img{
-    height:180px;
+    height: 180px;
     width: 300px;
-    margin: 0;
+    object-fit: cover; 
+    border-radius: 8px; 
+    float:left;
+    margin-right: 20px;
+    margin-left: 40px;
+    margin-top: 10px;
     
 }
 
@@ -184,69 +202,7 @@ header.primary nav ul li a:hover{
 
 }
 
-#visit h3{
-    flex:0 0 100%;
-    margin:0;
-    text-align:center;
-    text-decoration: underline;
-    font-size: 28px;
-    color:black;
-}
-
-#visit  {
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
-    gap:2rem;
-    border-bottom:2.5px dotted #c0c0c0;
-    padding: 2rem 0;
-    border-top:1px dotted #c0c0c0;
-    flex-wrap:wrap;
-}
-
-#visit header{
-    padding-top:10px;
-    font-size:.6rem;
-  }
-#visit .post{
-    box-shadow: 0 4px 8px #ffffff;
-    padding: 10px;
-    border-radius:4px;
-    font-size:.8rem;
-    transition:.5s;
-    flex:1;
-  }
-  
- #visit figure{
-    padding-left: 80px;
-    padding-right: 40px;
- }
-
-#visit img{
-    height:135px;
-    width: 225px;
-    margin: 0;
-    justify-content: center;
-    padding-right: 25px;
-    
-}
-
-#visit article h4{
-    padding-left: 70px;
-    padding-top: 10px;
-    font-size: 15px;
-}
-
-#visit article p{
-    text-align: center;
-    padding-left: 90px;
-    padding-right: 100px;
-    padding-top: 10px;
-    font-size: 13px;
-
-
-
-}
+C
 
   
   #visit .post:hover{
