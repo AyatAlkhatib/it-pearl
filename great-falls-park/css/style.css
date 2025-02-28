@@ -18,9 +18,10 @@ img{
 }
 
 body{
-    background-color: white;
+    background-color:  #F8F8F8;
     font-family: "Rokkitt", serif;
     font-size: 18px;
+    color: #333;
 
     
 }
@@ -36,7 +37,7 @@ main{
     position: relative;
     width: 100%;
     height: 50vh;
-    background-image: url("../img/great-falls.jpg");
+    background-image: url("../img/greatfallsummer.jpg");
     background-position: center; 
     background-size: cover;
     background-repeat: no-repeat;
@@ -51,11 +52,13 @@ main{
 }
 
 
+
 header.primary h1 a {
     color: white;
     font-size: 2em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px #FFC0B7;
     text-decoration: none;
+    
     
 }
 
@@ -66,14 +69,13 @@ header.primary{
     align-items: center;
 }
 
+
+
 header.primary nav{
-    position: relative;
-    width: 100%;
-    top: 0;
-    left: 0;
+    
     display: flex;
     justify-content: flex-end;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(219, 133, 133, 0.5); 
     padding: 1px 0;
     
     
@@ -81,10 +83,8 @@ header.primary nav{
 }
 
 header.primary nav ul{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap:20px;
+    flex-direction: column;
+    gap:10px;
 }
 
 
@@ -113,7 +113,7 @@ header.primary nav ul li{
 header.primary nav ul li ul {
     display: none;
     position: absolute;
-    background: rgba(0, 0, 0, 0.8);
+    background: #FFC0B7;
     list-style: none;
     top: 100%;
     left: 0;
@@ -138,7 +138,7 @@ header.primary nav ul li:hover > ul {
 }
 
 header.primary nav ul li a:hover{
-    background-color: rgba(0,0,0, .9);
+    background-color: #FF9A8F;
     text-decoration:underline;
     
 }
@@ -146,8 +146,11 @@ header.primary nav ul li a:hover{
   
 .welcome h1{
     text-align: center;
-    margin-top: 10px;
+    margin-top: 30px;
     margin-bottom:10px;
+    color: #393651;
+    text-shadow:  2px 2px 5px rgba(148, 110, 110, 0.5);
+    font-size: 35px;
 
 }
 
@@ -157,6 +160,13 @@ header.primary nav ul li a:hover{
     margin-top: 10px;
     margin-bottom:10px;
 
+}
+
+.welcome img{
+    height:180px;
+    width: 300px;
+    margin: 0;
+    
 }
 
 #history h2{
@@ -213,14 +223,16 @@ header.primary nav ul li a:hover{
  }
 
 #visit img{
-    height:90px;
-    width: 150px;
+    height:135px;
+    width: 225px;
     margin: 0;
+    justify-content: center;
+    padding-right: 25px;
     
 }
 
 #visit article h4{
-    padding-left: 90px;
+    padding-left: 70px;
     padding-top: 10px;
     font-size: 15px;
 }
@@ -243,7 +255,7 @@ header.primary nav ul li a:hover{
   
 
 #colophon{
-    background-color: #333333;
+    background-color: #FFC0B7;
     text-align:center;
     padding:10px;
     color:#ffffff;
