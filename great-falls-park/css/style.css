@@ -60,6 +60,7 @@ header.primary h1 a {
     text-decoration: none;
     
     
+    
 }
 
 
@@ -146,12 +147,11 @@ header.primary nav ul li a:hover{
   
 .welcome h1{
     text-align: center;
-    margin-top: 30px;
-    margin-bottom:10px;
+    margin:0 auto;
     color: #393651;
-    text-shadow:  2px 2px 5px rgba(148, 110, 110, 0.5);
+   display: block;
     font-size: 35px;
-    max-width: 60%;
+    width:100%;
     padding-bottom: 20px;
     
 
@@ -159,10 +159,7 @@ header.primary nav ul li a:hover{
 
 
 .welcome p{
-    padding-left: 20px;
-    margin-top: 10px;
-    margin-bottom:10px;
-    padding-top: 30px;
+    flex: 1;
     font-size: 20px;
     
    
@@ -170,20 +167,18 @@ header.primary nav ul li a:hover{
 
 }
 .welcome {
-    display:block;
+    display:flex;
+    align-items: center;
     gap: 20px; 
     padding: 20px;
-    overflow: hidden;
+    flex-wrap: wrap;
 }
 .welcome img{
     height: 180px;
     width: 300px;
     object-fit: cover; 
     border-radius: 8px; 
-    float:left;
-    margin-right: 20px;
-    margin-left: 40px;
-    margin-top: 10px;
+    flex-shrink: 0;
     
 }
 
@@ -191,7 +186,7 @@ header.primary nav ul li a:hover{
     padding-left: 20px;
     margin-top: 10px;
     margin-bottom:10px;
-    text-decoration: underline;
+    
 
 }
 
@@ -202,28 +197,125 @@ header.primary nav ul li a:hover{
 
 }
 
-C
+
 
   
-  #visit .post:hover{
-    box-shadow: 0 8px 16px rgba(0,0,0,.6);
-  }
+#visit h3 {
+    flex: 0 0 100%;
+    margin: 0;
+    text-align: center;
+    text-decoration: none;
+    font-size: 28px;
+    color: #393651;
+}
+
+#visit {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    border-bottom: 2.5px dotted #c0c0c0;
+    padding: 2rem 0;
+    border-top: 1px dotted #c0c0c0;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#visit header {
+    padding-top: 10px;
+    font-size: .6rem;
+}
+
+#visit .post {
+    box-shadow: 0 4px 8px #ffffff;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: .8rem;
+    transition: .5s;
+    flex: 1 1 300px; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+}
+
+#visit figure {
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+#visit img {
+    height: 135px;
+    width: 225px;
+    margin: 0;
+    object-fit: cover; 
+}
+
+#visit article h4 {
+    font-size: 15px;
+    padding-top: 10px;
+    margin: 0;
+}
+
+#visit article p {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    font-size: 13px;
+}
+
+#visit .post:hover {
+    box-shadow: 0 8px 16px #8C6C79;
+}
+
+#history h2 a, #visit h3 a {
+    text-decoration: none; 
+    color: inherit; 
+}
   
 
 #colophon{
     background-color: #FFC0B7;
     text-align:center;
-    padding:10px;
+    padding:20px;
     color:#ffffff;
     font-size: 1.2rem; 
+    display:flex;
+    flex-direction: column;
+    align-items: center;
   }
 
+  #colophon h5{
+    font: 1em sans-serif;
+    margin-bottom: 10px;
+    font-weight: bold;
+
+  }  
+
+  #colophon p{
+    max-width: 600px;
+    justify-content: center;
+    gap: 20px;
+    line-height: 1.5;
+  }
+
+
+
   .social-media a img {
-    width: 35px;  
-    height: 35px; 
+    width: 40px;  
+    height: 40px; 
     transition: transform 0.3s ease; 
   }
   
   .social-media a img:hover {
     transform: scale(1.1); 
+  }
+
+  #colophon h6{
+    font-size: 1rem;
+    margin-top: 20px;
   }
