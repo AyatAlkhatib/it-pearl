@@ -308,8 +308,8 @@ header.primary nav ul li a:hover{
 
 #visit ul li{
     padding: 5px;
-    
-
+    text-align: left;
+    line-height: 35px;
 }
   
 
