@@ -28,10 +28,10 @@
             <br><br>
 
             <label class="formlabel">From Unit: </label>
-                <label for="fromcentimenters">
+                <label for="fromcentimeters">
                     <input type="radio" name="fromunit" id="fromcentimeters" value = "cm" data-rule-required="true" data-msg-required="From Unit is Required" > centimenters
                 </label>
-                <label for="frommmeters">
+                <label for="frommeters">
                     <input type="radio" name="fromunit" id="frommeters" value = "m">Meters 
                 </label>
                 <label for="fromkilometers">
@@ -49,7 +49,7 @@
                 <label for="frommiles">
                     <input type="radio" name="fromunit" id="frommiles" value = "mi" >miles
                 </label>
-                <label for="fromunit" class="error" id="FormUnitError"></label>
+                <label for="fromunit" class="error" id="fromunit"></label>
                 <br><br>
 
                 <label class="formlabel">To Unit: </label>
@@ -74,7 +74,7 @@
                 <label for="tomiles">
                     <input type="radio" name="tounit" id="tomiles" value = "mi">miles
                 </label>
-                <label for="tounit" class="error" id="ToUnitError"></label>
+                <label for="tounit" class="error" id="tounit"></label>
             <br><br>
       
 
@@ -83,7 +83,7 @@
             <br><br>
 
             <input type="button" value="Calculate" name="Calculate" onclick="calculate();">
-            <input type="button" value="Clear" name="Clear" onclick="clearform();" novalidate >
+            <input type="button" value="Clear" name="Clear" onclick="clearform();"  >
 
         </fieldset>
     </div>
