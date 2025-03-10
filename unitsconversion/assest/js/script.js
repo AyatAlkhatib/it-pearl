@@ -85,13 +85,13 @@ function calculate(){
             "use strict";
             document.getElementById("fromvalue").value="";
 
-            document.getElementById("cm").checked = false;
-            document.getElementById("m").checked = false;
-            document.getElementById("km").checked = false;
-            document.getElementById("in").checked = false;
-            document.getElementById("ft").checked = false;
-            document.getElementById("yd").checked = false;
-            document.getElementById("mi").checked = false;
+            document.getElementById("fromcentimeters").checked = false;
+            document.getElementById("frommeters").checked = false;
+            document.getElementById("fromkilometers").checked = false;
+            document.getElementById("frominches").checked = false;
+            document.getElementById("fromfeet").checked = false;
+            document.getElementById("fromyards").checked = false;
+            document.getElementById("frommiles").checked = false;
 
             document.getElementById("tocentimenters").checked = false;
             document.getElementById("tometers").checked = false;
