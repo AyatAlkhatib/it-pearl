@@ -21,18 +21,18 @@
             <br>
             
             <label class="formlabel" for="fromvalue">From Value: </label>
-            <input type="text" id="fromvalue" name="fromvalue" size="17" maxlength="17"
+            <input type="text" id="fromvalue" name="fromvalue" size="15" maxlength="15"
                     data-rule-required="true"  data-msg-required="From Value is Required" 
                     data-rule-number="true" data-msg-number="From Value Must be A number">
-            <label for="fromvalue" class="error" id="fromvalue-error"></label>
+            <label for="fromvalue" class="error" id="fromvaluemessage"></label>
             <br><br>
 
             <label class="formlabel">From Unit: </label>
                 <label for="fromcentimenters">
-                    <input type="radio" name="fromunit" id="fromcentimenters" value = "cm" data-rule-required="true" data-msg-required="Form Unit is Required" > centimenters
+                    <input type="radio" name="fromunit" id="fromcentimeters" value = "cm" data-rule-required="true" data-msg-required="From Unit is Required" > centimenters
                 </label>
                 <label for="frommmeters">
-                    <input type="radio" name="fromunit" id="frommmeters" value = "m">Meters 
+                    <input type="radio" name="fromunit" id="frommeters" value = "m">Meters 
                 </label>
                 <label for="fromkilometers">
                     <input type="radio" name="fromunit" id="fromkilometers" value = "km">kilometers
@@ -49,11 +49,12 @@
                 <label for="frommiles">
                     <input type="radio" name="fromunit" id="frommiles" value = "mi" >miles
                 </label>
+                <label for="fromunit" class="error" id="FormUnitError"></label>
                 <br><br>
 
                 <label class="formlabel">To Unit: </label>
                 <label for="tocentimenters">
-                    <input type="radio" name="tounit" id="tocentimenters" value = "cm" data-rule-required="true" data-msg-required="Form Unit is Required"> centimenters
+                    <input type="radio" name="tounit" id="tocentimenters" value = "cm" data-rule-required="true" data-msg-required="To Unit is Required"> centimenters
                 </label>
                 <label for="tometers">
                     <input type="radio" name="tounit" id="tometers" value = "m">Meters
@@ -73,6 +74,7 @@
                 <label for="tomiles">
                     <input type="radio" name="tounit" id="tomiles" value = "mi">miles
                 </label>
+                <label for="tounit" class="error" id="ToUnitError"></label>
             <br><br>
       
 

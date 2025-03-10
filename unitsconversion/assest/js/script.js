@@ -13,10 +13,10 @@ function calculate(){
         let Fromunit = "";
 
     
-        if (document.getElementById("fromcentimenters").checked){
+        if (document.getElementById("fromcentimeters").checked){
             Fromunit = "cm";
         }
-            else if (document.getElementById("frommmeters").checked){
+            else if (document.getElementById("frommeters").checked){
                 Fromunit = "m";
         }
         
