@@ -18,6 +18,7 @@
                 <h1>Currency Value History</h1>
                 <label for="basecurrency" class="formlabel">Base Currency: </label>
                 <select id="basecurrency" name="basecurrency" data-rule-required="true" data-msg-required="Base Currency is Required">
+                    <option value="">Select An Option</option>
                     <option value="KRW">Korean Won</option>
                     <option value="JOD">Jordanian Dinar</option>
                     <option value="JPY">Japanese Yen</option>
@@ -29,6 +30,7 @@
                 <br><br>
             <label for="convertcurrency">Convert Currency</label>
             <select id="convertcurrency" name="convertcurrency"  data-rule-required="true" data-msg-required="Convert Currency is Required">
+                    <option value="">Select An Option</option>
                     <option value="KRW">Korean Won</option>
                     <option value="JOD">Jordanian Dinar</option>
                     <option value="JPY">Japanese Yen</option>
@@ -45,7 +47,7 @@
             <input type="date" id="todate" name="todate" required>
             <br><br>
 
-            <input type="button" value="showresults" id="DisplayCurrency">
+            <input type="button" value="results" id="DisplayCurrency">
             <input type="button" value="clear" id="clear" name="clear" onclick="ClearForm();">
             <hr>
          </div>
