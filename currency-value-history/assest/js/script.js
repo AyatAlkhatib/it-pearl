@@ -12,11 +12,11 @@ async function getcurrency(){
     if(form.valid()){
         let basecurrency = document.getElementById("basecurrency").value;
         let convertcurrency = document.getElementById("convertcurrency").value;
-        let apikey = "1jskOv89X78xC7cODOKkjT916wwZT2qS";
+        let apikey = "YOUR_NEW_API_KEY";
         let fromdate = document.getElementById("fromdate").value;
         let todate = document.getElementById("todate").value;
 
-        let mylink = `https://api.polygon.io/v2/aggs/ticker/C:${basecurrency}${convertcurrency}/range/1/day/${fromdate}/${todate}?apikey=${apikey}`;
+        let mylink = `https://api.polygon.io/v2/aggs/ticker/C:${basecurrency}${convertcurrency}/range/1/day/${fromdate}/${todate}?apiKey=${apikey}`;
 
         let response = await fetch(mylink);
 
@@ -91,7 +91,7 @@ function clearform(){
     $("#todate").val(""); 
 
     if (myChart0){
-        myChart0.destory();
+        myChart0.destroy();
         myChart0=null;
     }
     
