@@ -12,18 +12,19 @@ async function getcurrency(){
     if(form.valid()){
         let basecurrency = document.getElementById("basecurrency").value;
         let convertcurrency = document.getElementById("convertcurrency").value;
-        let apikey = "YOUR_NEW_API_KEY";
+        let apikey = "U35Ne42o9GV4sP5US6EWAi10_gtf1LpB";
         let fromdate = document.getElementById("fromdate").value;
         let todate = document.getElementById("todate").value;
 
         let mylink = `https://api.polygon.io/v2/aggs/ticker/C:${basecurrency}${convertcurrency}/range/1/day/${fromdate}/${todate}?apiKey=${apikey}`;
+
 
         let response = await fetch(mylink);
 
         if (response.ok){
             let data = await response.json();
             
-            if (!data.result || data.results.length == 0){
+            if (!data.results || data.results.length == 0){
                 alert("No Data found from the currency you've selected");
                 return;
 
@@ -32,13 +33,19 @@ async function getcurrency(){
             let labels = [];
             let datapoints=[];
 
-            data.results.forEach(item =>{
-                let data = new Date(item.t);
-                labels.push(`${date.toLocaleString('en-US', { month: 'short' })} ${date.getDate()}`);
+            data.results.forEach(item => {
+                let dateObj = new Date(item.t);  
+                labels.push(`${dateObj.toLocaleString('en-US', { month: 'short' })} ${dateObj.getDate()}`);
                 datapoints.push(parseFloat(item.c).toFixed(3));
 
             });
+
+            console.log("Chart Labels:", labels); // Log the labels
+            console.log("Chart Data Points:", datapoints); // Log the data points
+
             let ctx0 = document.getElementById("chartjs-0").getContext('2d');
+
+
 
             if (myChart0){
                 myChart0.destroy();
