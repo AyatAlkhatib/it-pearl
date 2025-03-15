@@ -77,7 +77,7 @@ header.primary nav{
     
     display: flex;
     justify-content: center;
-    background-color: black; 
+    background-color: #c2b7ff; 
     padding: 1px 0;
     
     
@@ -95,7 +95,7 @@ header.primary nav ul{
 
 
 header.primary nav ul li a{
-    color:white; 
+    color:black; 
     display: block;
     padding:10px 10px 10px 10px;
     text-align: center;
@@ -313,10 +313,10 @@ header.primary nav ul li a:hover{
   
 
 #colophon{
-    background-color: #FFC0B7;
+    background-color: #c2b7ff;
     text-align:center;
     padding:20px;
-    color:#ffffff;
+    color:#363636;
     font-size: 1.2rem; 
     display:flex;
     flex-direction: column;
