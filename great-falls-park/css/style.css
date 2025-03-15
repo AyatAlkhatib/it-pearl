@@ -118,7 +118,7 @@ header.primary nav ul li{
 header.primary nav ul li ul {
     display: none;
     position: absolute;
-    background: #a3a3a3;
+    background: #bfbfbfa3;
     list-style: none;
     top: 100%;
     left: 0;
@@ -127,7 +127,7 @@ header.primary nav ul li ul {
 }
 
 header.primary nav ul li ul a{
-    color:white; 
+    color:#1a1a1a; 
     display: block;
     padding:10px 10px 10px 10px;
     text-align: center;
