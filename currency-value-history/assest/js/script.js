@@ -40,8 +40,8 @@ async function getcurrency(){
 
             });
 
-            console.log("Chart Labels:", labels); // Log the labels
-            console.log("Chart Data Points:", datapoints); // Log the data points
+            console.log("Chart Labels:", labels); 
+            console.log("Chart Data Points:", datapoints); 
 
             let ctx0 = document.getElementById("chartjs-0").getContext('2d');
 
