@@ -354,37 +354,4 @@ header.primary nav ul li a:hover{
     margin-top: 20px;
   }
 
-  .fade{
-    margin:20px auto;
-    width:45vw;
-    /* Set Max Content Width */
-    max-width:700px;
-}
-
-
-.slick-autoplay-toggle-button,
-.slick-prev .slick-prev-icon, .slick-next .slick-next-icon,
-.slick-dots li button .slick-dot-icon,
-.slick-dots li.slick-active button .slick-dot-icon {
-  color: white;
-}
-
-/* Customize Previous/Next/Dots/Autoplay - Active State */
-
-.slick-next:focus .slick-next-icon,
-.slick-next:focus .slick-prev-icon,
-.slick-prev:focus .slick-next-icon,
-.slick-prev:focus .slick-prev-icon,
-.slick-dots li button:focus .slick-dot-icon:before,
-.slick-dots li.slick-active button:focus .slick-dot-icon,
-.slick-autoplay-toggle-button:focus 
-{
-    color:black;
-}
-
-#whyvisit img {
-    height: 275px;
-    width: 450px;
-    margin: 0;
-    object-fit: cover; 
-}
+  
