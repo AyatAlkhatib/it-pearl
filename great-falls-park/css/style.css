@@ -1,5 +1,6 @@
 html {
     box-sizing:border-box;
+    scroll-behavior: smooth;
 
 }
 
@@ -22,6 +23,7 @@ body{
     font-family: "Rokkitt", serif;
     font-size: 18px;
     color: #333;
+    line-height: 1.6;
 
     
 }
@@ -31,6 +33,7 @@ main{
     width:80vw;
     margin:50px auto;
     padding: 20px;
+    
    
 }
 
@@ -57,7 +60,7 @@ main{
 header.primary h1 a {
     color: white;
     font-size: 2em;
-    
+   
     text-decoration: none;
     
     
@@ -69,6 +72,7 @@ header.primary{
     position: relative;
     justify-content: center;
     align-items: center;
+    background-color: #393651;
 }
 
 
@@ -78,7 +82,7 @@ header.primary nav{
     display: flex;
     justify-content: center;
     background-color: #c2b7ff; 
-    padding: 1px 0;
+    padding: 5px 0;
     
     
 
@@ -100,7 +104,7 @@ header.primary nav ul li a{
     padding:10px 10px 10px 10px;
     text-align: center;
     transition:.5s;
-    font-size: .9;
+    font-size: 20px;
     text-decoration: none;
     
 
@@ -168,6 +172,14 @@ header.primary nav ul li a:hover{
    
     
 
+}
+
+#content, #history {
+    background: white;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
 }
 .welcome {
     display:flex;
