@@ -188,7 +188,7 @@ header.primary nav ul li a:hover{
     padding: 20px;
     flex-wrap: wrap;
 }
-.welcome img{
+.welcome img {
     height: 180px;
     width: 300px;
     object-fit: cover; 
@@ -239,6 +239,7 @@ header.primary nav ul li a:hover{
 
 
 
+
   
 #visit h3, #whyvisit h3 {
     flex: 0 0 100%;
@@ -263,7 +264,7 @@ header.primary nav ul li a:hover{
 
 #visit header {
     padding-top: 10px;
-    font-size: .6rem;
+    font-size: .9rem;
 }
 
 #visit .post {
@@ -295,7 +296,7 @@ header.primary nav ul li a:hover{
 }
 
 #visit article h4 {
-    font-size: 15px;
+    font-size: 20px;
     padding-top: 10px;
     margin: 0;
 }
@@ -305,7 +306,7 @@ header.primary nav ul li a:hover{
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 #visit .post:hover {
@@ -366,4 +367,16 @@ header.primary nav ul li a:hover{
     margin-top: 20px;
   }
 
-  
+#backToTop{
+    color:white;
+    background-color: #bfbfbfa3;
+    position: relative;
+    left:20px;
+    height:60px;
+    width:60px;
+    margin-bottom: 20px;
+
+
+    
+}
+
