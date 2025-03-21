@@ -9,8 +9,13 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/accessible-slick-theme.min.css"> 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.js"></script>
-<script src="js/scripts.js"></script>
-  <link href="../great-falls-park/css/style.css" rel="stylesheet">
+<link href="../great-falls-park/css/style.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+<script src="js/weather.js"></script>
+
+
 </head>
 <body>
     <main>
@@ -34,24 +39,21 @@
         </header>
       
         <section id="content" class="welcome">
-          <h1>Welcome to Great Falls Park (Virginia)</h1>
-          <img src="../great-falls-park/img/greatfallsadj1.jpg" alt="placeholder">
-       
-          <p>Nestled along the Potomac River, Great Falls Park offers a breathtaking landscape filled with stunning waterfalls, scenic trails, and abundant wildlife. Whether you're here to hike, enjoy a peaceful picnic, or explore the historic remnants of the canal system, Great Falls has something for everyone. Located just outside Washington, D.C., it’s a perfect getaway into nature, blending rich history with spectacular outdoor experiences</p>
-        </section>
-           <section id="history">
-          <h2><a href="history.html">Rich in History</a></h2>
-          <p>Great Falls Park has been a vital part of the area's history for centuries. The park is home to the remains of the Chesapeake and Ohio Canal, a key transportation route built in the 1800s. The park was established to preserve the beauty and history of the area and became a National Park in 1966. You can explore the historical Lockhouse 10 or learn about the canal's role in shaping the region at the park's Visitor Center.</p>
-          </section>
-          <section id="whyvisit">
-          <h3><a href="activites.html">Why Visit?</a></h3>
-          <p>Great Falls Park offers stunning waterfalls, scenic trails, and rich history along the Potomac River. Whether you love hiking, picnicking, or exploring nature, it’s the perfect escape for adventure and relaxation.</p>
-          <div class="fade container">
-            <div><img src="../great-falls-park/img/hiking.jpg" alt="stars"></div>
-            <div><img src="../great-falls-park/img/historic.jpg" alt="stars"></div>
-            <div><img src="../great-falls-park/img/wildfire.jpg" alt="stars"></div>
-            <div><img src="../great-falls-park/img/stunningwaterfalls.jpg" alt="stars"></div>
-          </div>
+          <form id="myform">
+            <div class="formcontanier">
+                <h1>Great Falls Park Weather</h1>
+                <label class="formlabel" for="location"> Enter Location: </label>
+                <input type="text" id="location" name="Location" size="30" maxlength="30" value="Virginia" data-rule-required="true" data-msg-required="Location is Required"><br>
+                <button id="displayweather">Display Weather</button>
+                <input type="button" value="Clear" id="Clear" name="Clear" onclick="clearForm();">
+
+            </div>
+          </form>
+
+          <div id="weatherloc"></div>
+          <div id="forecastlocation"></div>
+          <canvas id="weather" width="600" height="400"></canvas>
+          
         </section>
       
 
