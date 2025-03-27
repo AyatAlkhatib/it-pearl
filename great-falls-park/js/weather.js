@@ -1,14 +1,58 @@
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("location").value = "Virginia"; 
-    getForecast(); 
+  let slideIndex = 0;
+  let slides = document.getElementsByClassName("slide");
+
+  function showSlides() {
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    
+    slideIndex++;
+    if (slideIndex >= slides.length) {
+      slideIndex = 0;
+    }
+    
+    slides[slideIndex].style.display = "block";
+  }
+
+  showSlides();
+  setInterval(showSlides, 5000);
+});
+
+function toggleMenu() {
+  document.querySelector(".nav-links").classList.toggle("active");
+}
+
+
+$(document).ready(function () {
+  $('.slider').slick({
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 3,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    dots: true,
+    infinite: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          centerMode: false,
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
 });
 
 $(document).ready(function () {
-    $("#displayweather").click(getForecast); 
+  $("#displayweather").click(getWeatherForecast);
 });
 
-async function getForecast() {
+async function getWeatherForecast() {
   "use strict";
+
   let form = $("#myform");
 
   if (form.valid()) {
@@ -18,44 +62,43 @@ async function getForecast() {
       return;
     }
 
-    let weburl = `https://geocoding-api.open-meteo.com/v1/search?name=${locationInput}&count=10&format=json`;
+    let geocodeURL = `https://geocoding-api.open-meteo.com/v1/search?name=${locationInput}&count=10&format=json`;
 
-    let geocodeResponse = await fetch(weburl);
+    let geocodeResponse = await fetch(geocodeURL);
     if (geocodeResponse.status >= 200 && geocodeResponse.status <= 299) {
       let geocodeData = await geocodeResponse.json();
       if (!geocodeData.results || geocodeData.results.length === 0) {
         alert("No location found.");
         return;
       }
-      let locationData = geocodeData.results[0]; 
+      let locationData = geocodeData.results[0];
 
-      let URL = `https://api.open-meteo.com/v1/forecast?latitude=${locationData.latitude}&longitude=${locationData.longitude}&hourly=temperature_2m&temperature_unit=fahrenheit`;
-
-      let weatherResponse = await fetch(URL);
+      let weatherURL = `https://api.open-meteo.com/v1/forecast?latitude=${locationData.latitude}&longitude=${locationData.longitude}&hourly=temperature_2m&temperature_unit=fahrenheit`;
+      let weatherResponse = await fetch(weatherURL);
       if (weatherResponse.status >= 200 && weatherResponse.status <= 299) {
         let weatherData = await weatherResponse.json();
-        let tempHourly = weatherData.hourly;  
+        let weatherHourly = weatherData.hourly;
 
-        /
-        document.getElementById("weatherloc").innerHTML = `<h3>${locationData.name}, ${locationData.admin1}, ${locationData.country}</h3>
-         <p><strong>Latitude =</strong> ${locationData.latitude} - <strong>Longitude =</strong> ${locationData.longitude}</p>`;
+        document.getElementById(
+          "weatherloc"
+        ).innerHTML = `<h3>${locationData.name}, ${locationData.admin1}, ${locationData.country}</h3>
+     <p><strong>Latitude =</strong> ${locationData.latitude} - <strong>Longitude =</strong> ${locationData.longitude}</p>`;
 
-    
-        let forecastTable = "<table>" + "<caption><strong>Temperature</strong></caption>" + "<tr><th>Date</th><th>Temp</th></tr>";
+        let forecastTable =
+          "<table>" + "<caption><strong>Temperature</strong></caption>" + "<tr><th>Date</th><th>Temp</th></tr>";
         let labels = [];
         let temperatures = [];
 
-        for (let i = 0; i < tempHourly.time.length; i++) {
-          let unixTime = Date.parse(tempHourly.time[i]);
+        for (let i = 0; i < weatherHourly.time.length; i++) {
+          let unixTime = Date.parse(weatherHourly.time[i]);
           let formattedTime = new Date(unixTime).toLocaleString();
-          forecastTable += `<tr><td>${formattedTime}</td><td>${tempHourly.temperature_2m[i]}</td></tr>`; 
+          forecastTable += `<tr><td>${formattedTime}</td><td>${weatherHourly.temperature_2m[i]}</td></tr>`;
           labels.push(formattedTime);
-          temperatures.push(tempHourly.temperature_2m[i]);
+          temperatures.push(weatherHourly.temperature_2m[i]);
         }
         forecastTable += "</table>";
         document.getElementById("forecastlocation").innerHTML = forecastTable;
 
-       
         if (window.myChart) {
           window.myChart.destroy();
         }
@@ -78,8 +121,8 @@ async function getForecast() {
             responsive: true,
             maintainAspectRatio: false,
             scales: {
-              x: { title: { display: true, text: "Time" } },
-              y: { title: { display: true, text: "Temperature (°F)" } }
+              x: { title: { display: true, text: "" } },
+              y: { title: { display: true, text: "" } }
             }
           }
         });
@@ -92,6 +135,7 @@ async function getForecast() {
   }
 }
 
+
 function clearForm() {
   "use strict";
   document.getElementById("location").value = "";
@@ -102,3 +146,8 @@ function clearForm() {
     window.myChart.destroy();
   }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("location").value = "Virginia"; 
+  getWeatherForecast(); 
+});
